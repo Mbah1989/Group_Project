@@ -1,0 +1,31 @@
+﻿@page
+@model Group_Project.Pages.CreateMusicModel
+@{
+    ViewData["Title"] = "CreateMusic";
+}
+<h1> CreateMusic</h1>
+<div class="row">
+    <div class="col-md-3">
+      <form method="post">
+          <div class="form-group">
+              <label asp-for="@Model.Music.Genre" class="control-label"></label>
+                <input asp-for="@Model.Music.Genre" class="form-control"/>
+          </div>
+            <div class="form-group">
+                <label asp-for="@Model.Music.Name" class="control-label"></label>
+                <input asp-for="@Model.Music.Name" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="@Model.Music.Year" class="control-label"></label>
+                <input asp-for="@Model.Music.Year" class="form-control" />
+            </div>
+            <div class="form-group">
+                <input type="submit" value="create" class=" btn btn-primary"/>
+            </div>
+      </form>
+    </div>
+
+</div>
+<div>
+    <a asp-page="Index"> Back to list</a>
+</div>
